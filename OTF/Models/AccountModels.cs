@@ -8,6 +8,7 @@ using System.Web.Security;
 
 namespace OTF.Models
 {
+
     public class UsersContext : DbContext
     {
         public UsersContext()
