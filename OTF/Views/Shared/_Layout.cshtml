@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - On The Fly</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <script  type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script  type="text/javascript" src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/themes/base/css")
+</head>
+<body>
+    <div id="userSettings">
+        @Html.Partial("_UserSettings")
+    </div>
+
+    <div id="body">
+        @RenderBody()
+    </div>
+
+    <footer>
+       @* <nav>
+            <ul id="menu">
+                <li>@Html.ActionLink("Whatever you have to offer or whatever you need On The Fly...", "Index", "Home", new { area = "" }, null)</li>
+                <li>@Html.ActionLink("API", "Index", "Help", new { area = "HelpPage" }, null)</li>
+            </ul>
+        </nav> *@
+        @*<p>Learn more about <a href="http://go.microsoft.com/fwlink/?LinkId=273732">Single Page Applications</a></p>*@
+        <p>&copy; @DateTime.Now.Year - OTF</p>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/ajaxlogin")
+     @*@Scripts.Render("~/bundles/gmap3")*@
+    @RenderSection("scripts", required: false)
+</body>
+</html>
