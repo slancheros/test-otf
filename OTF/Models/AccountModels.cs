@@ -8,7 +8,7 @@ using System.Web.Security;
 
 namespace OTF.Models
 {
-
+    // Just a comment line from ISA to test commits in GIT
     public class UsersContext : DbContext
     {
         public UsersContext()
